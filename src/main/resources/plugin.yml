@@ -1,0 +1,4 @@
+name: CollectPlugin
+version: '${project.version}'
+main: me.wantsome.plugins.collect.CollectPlugin
+api-version: '1.20'
