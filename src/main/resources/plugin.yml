@@ -2,3 +2,9 @@ name: CollectPlugin
 version: '${project.version}'
 main: me.wantsome.plugins.collect.CollectPlugin
 api-version: '1.20'
+commands:
+  c:
+    description: Collect commands
+    usage: /<command> [add|list]
+    aliases:
+      - collect
