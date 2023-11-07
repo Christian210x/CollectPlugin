@@ -2,9 +2,10 @@ package me.wantsome.plugins.collect.objects;
 
 import org.bukkit.Location;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Collect {
+public class TemporaryCollect {
 
     private String name;
     private String texture;
@@ -12,7 +13,7 @@ public class Collect {
 
     private List<String> players;
 
-    public Collect(String name, String texture, Location location){
+    public TemporaryCollect(String name, String texture, Location location){
         this.name = name;
         this.texture = texture;
         this.location = location;

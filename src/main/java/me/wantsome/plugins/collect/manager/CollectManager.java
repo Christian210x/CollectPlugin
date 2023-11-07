@@ -44,7 +44,6 @@ public class CollectManager {
         }
     }
 
-    //write collect object when command is set up, we then right-click the player head on the ground
     public void write(Collect collect){
         ConfigurationSection section = plugin.getHeadConfig().getHeadConfiguration();
         section.set(collect.getName(), null);

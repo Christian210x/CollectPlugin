@@ -1,5 +1,6 @@
 package me.wantsome.plugins.collect;
 
+import me.wantsome.plugins.collect.commands.CollectCommand;
 import me.wantsome.plugins.collect.configs.HeadConfig;
 import me.wantsome.plugins.collect.configs.MessageConfig;
 import me.wantsome.plugins.collect.listeners.CollectListener;
@@ -58,7 +59,7 @@ public final class CollectPlugin extends JavaPlugin {
     private void initCommands(){
         long start = System.currentTimeMillis();
 
-        this.collectListener = new CollectListener(this);
+        new CollectCommand(this);
 
         Bukkit.getServer().getLogger().info("Successfully initialized commands! [" + getTimeDifference(start, System.currentTimeMillis()) + "]");
     }
@@ -66,7 +67,7 @@ public final class CollectPlugin extends JavaPlugin {
     private void initEvents(){
         long start = System.currentTimeMillis();
 
-        new CollectListener(this);
+        this.collectListener = new CollectListener(this);
 
         Bukkit.getServer().getLogger().info("Successfully initialized events! [" + getTimeDifference(start, System.currentTimeMillis()) + "]");
     }

@@ -26,11 +26,6 @@ public class MessageConfig {
         messageFileConfig.options().parseComments(true);
 
         try {
-            //this.messageFile.createNewFile();
-            //this.messageFileConfig = YamlConfiguration.loadConfiguration(this.messageFile);
-            //this.messageFileConfig.set("collect-head", "You have collected a head!");
-            //this.messageFileConfig.set("obtained-head", "You already have this head! Go find a different one!");
-            //this.messageFileConfig.save(this.messageFile);
             this.messageFileConfig.load(messageFile);
         }catch (Exception exception){
             plugin.getLogger().info("Message Config did not Load! Plugin Shutting Down!");
